@@ -36,6 +36,10 @@ function movies_collection(array $filter = [])
                 null,
                 '&'
             )
+        ],
+        'search' => [
+            'href' => '/{?title,per_page,page}',
+            'templated' => true
         ]
     ];
 
