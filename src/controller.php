@@ -4,7 +4,7 @@ namespace PhpMovieRestApi\Controller;
 
 use function PhpMovieRestApi\Data\movies;
 use function PhpMovieRestApi\Data\paginate;
-use function PhpMovieRestApi\Http\json_response;
+use function PhpMovieRestApi\Http\hal_json_response;
 
 function movies_collection(array $filter = [])
 {
@@ -73,7 +73,7 @@ function movies_collection(array $filter = [])
         ];
     }
 
-    json_response([
+    hal_json_response([
         '_links' => $links,
         '_embedded' => [
             'movies' => $paginate['data']

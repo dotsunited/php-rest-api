@@ -13,6 +13,6 @@ switch ($pathInfo) {
         PhpMovieRestApi\Controller\movies_collection($_GET);
         break;
     default:
-        PhpMovieRestApi\Http\json_error_response(404, 'Not Found');
+        PhpMovieRestApi\Http\vnd_error_json_response(404, 'Not Found');
         break;
 }
