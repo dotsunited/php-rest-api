@@ -74,6 +74,8 @@ function movies_collection(array $filter = [])
     }
 
     hal_json_response([
+        'total' =>  $paginate['total'],
+        'total_pages' =>  $paginate['total_pages'],
         '_links' => $links,
         '_embedded' => [
             'movies' => $paginate['data']
